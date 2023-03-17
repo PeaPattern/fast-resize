@@ -3,15 +3,15 @@ local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 
 local function Clear()
     repeat
-        found = Character:FindFirstChild("OriginalSize", true)
+        local found = Character:FindFirstChild("OriginalSize", true)
         if found then found:Destroy() end
     until not found
     repeat
-        found = Character:FindFirstChild("OriginalPosition", true)
+        local found = Character:FindFirstChild("OriginalPosition", true)
         if found then found:Destroy() end
     until not found
     repeat
-        found = Character:FindFirstChild("AvatarPartScaleType", true)
+        local found = Character:FindFirstChild("AvatarPartScaleType", true)
         if found then found:Destroy() end
     until not found
 end
