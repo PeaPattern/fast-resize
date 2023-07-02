@@ -20,5 +20,5 @@ local Order={"BodyProportionScale","BodyHeightScale","BodyWidthScale","BodyDepth
 for _ = 1, 5 do
     Clear()
     Humanoid:FindFirstChild(Order[_]):Destroy()
-    wait(0.1)
+    wait(0.2)
 end
