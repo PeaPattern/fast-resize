@@ -1,24 +1,16 @@
 local Character = game:GetService("Players").LocalPlayer.Character
 local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 
-local function Clear()
-    repeat
-        local found = Character:FindFirstChild("OriginalSize", true)
-        if found then found:Destroy() end
-    until not found
-    repeat
-        local found = Character:FindFirstChild("OriginalPosition", true)
-        if found then found:Destroy() end
-    until not found
-    repeat
-        local found = Character:FindFirstChild("AvatarPartScaleType", true)
-        if found then found:Destroy() end
-    until not found
-end
-
 local Order={"BodyProportionScale","BodyHeightScale","BodyWidthScale","BodyDepthScale","HeadScale"}
 for _ = 1, 5 do
-    Clear()
+    repeat
+        local found = Character:FindFirstChild("OriginalSize", true)
+        local found2 = Character:FindFirstChild("OriginalPosition", true)
+        local found3 = Character:FindFirstChild("AvatarPartScaleType", true)
+        if found then found:Destroy() end
+        if found2 then found2:Destroy() end
+        if found3 then found3:Destroy() end
+    until not found and not found2 and not found3
     Humanoid:FindFirstChild(Order[_]):Destroy()
-    wait(0.2)
+    task.wait(0.15)
 end
