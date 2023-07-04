@@ -12,5 +12,5 @@ for _,v in Order do
         if found3 then found3:Destroy() end
     until not found and not found2 and not found3
     Humanoid[v]:Destroy()
-    task.wait(0.18)
+    task.wait(0.21)
 end
